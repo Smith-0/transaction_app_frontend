@@ -47,17 +47,18 @@ const TransactionList = () => {
 
   return (
     <>
+      {/* form modal for add transaction */}
       <div
         class="modal fade"
-        id="exampleModal"
+        id="txnAddModal"
         tabindex="-1"
-        aria-labelledby="exampleModalLabel"
+        aria-labelledby="txnAddModalLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <h1 class="modal-title fs-5" id="txnAddModalLabel">
                 New Transaction
               </h1>
             </div>
@@ -131,18 +132,21 @@ const TransactionList = () => {
           </div>
         </div>
       </div>
+
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h2>Office Transactions</h2>
         <button
           type="button"
           className="btn btn-primary"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          data-bs-target="#txnAddModal"
         >
           Add Transaction
         </button>
       </div>
-      <table class="table table-bordered mt-5">
+
+      {/* tabel for list of all txn in desending order by creation date */}
+      <table class="table table-bordered mt-5 table-responsive">
         <thead>
           <tr>
             <th scope="col">Date</th>
